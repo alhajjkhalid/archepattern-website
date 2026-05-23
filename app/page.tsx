@@ -466,21 +466,23 @@ function ButtonLink({
   href,
   children,
   variant = "primary",
-  lang = "ar"
+  lang = "ar",
+  className = ""
 }: {
   href: string;
   children: ReactNode;
   variant?: "primary" | "secondary";
   lang?: Lang;
+  className?: string;
 }) {
   return (
     <a
       href={href}
-      className={
+      className={`${
         variant === "primary"
-          ? "group inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-bold text-ink shadow-teal transition hover:-translate-y-0.5 hover:bg-white"
-          : "group inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-electric/50 hover:bg-electric/10"
-      }
+          ? "group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-teal px-5 py-3 text-sm font-bold text-ink shadow-teal transition hover:-translate-y-0.5 hover:bg-white sm:px-6"
+          : "group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-electric/50 hover:bg-electric/10 sm:px-6"
+      } ${className}`}
     >
       {children}
       <ArrowUpLeft className={`h-4 w-4 transition ${lang === "ar" ? "group-hover:-translate-x-0.5" : "group-hover:translate-x-0.5"} group-hover:translate-y-0.5`} />
@@ -512,12 +514,12 @@ function FloatingWorkflowHero({ nodes, centerLabel }: { nodes: typeof heroWorkfl
   const reduceMotion = useReducedMotion();
 
   return (
-    <div className="relative min-h-[520px] overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.035] p-4 shadow-glow">
-      <div className="absolute inset-4 overflow-hidden rounded-[26px] border border-white/10 bg-ink">
+    <div className="workflow-visual relative min-h-[410px] overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.035] p-3 shadow-glow sm:min-h-[520px] sm:rounded-[34px] sm:p-4">
+      <div className="absolute inset-3 overflow-hidden rounded-[20px] border border-white/10 bg-ink sm:inset-4 sm:rounded-[26px]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(55,245,208,0.16),transparent_18rem),radial-gradient(circle_at_22%_16%,rgba(77,184,255,0.14),transparent_13rem),linear-gradient(135deg,rgba(12,24,43,0.98),rgba(5,7,13,0.96))]" />
         <div className="absolute inset-0 geometric-grid opacity-[0.18]" />
-        <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-teal/10" />
-        <div className="absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full border border-electric/10" />
+        <div className="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full border border-teal/10 sm:h-72 sm:w-72" />
+        <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-electric/10 sm:h-48 sm:w-48" />
       </div>
 
       <svg className="pointer-events-none absolute inset-0 z-40 h-full w-full" viewBox="0 0 640 520" preserveAspectRatio="none" aria-hidden="true">
@@ -545,14 +547,14 @@ function FloatingWorkflowHero({ nodes, centerLabel }: { nodes: typeof heroWorkfl
         })}
       </svg>
 
-      <div className="absolute left-1/2 top-1/2 z-50 h-28 w-28 -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute left-1/2 top-1/2 z-50 h-24 w-24 -translate-x-1/2 -translate-y-1/2 sm:h-28 sm:w-28">
         <motion.div
           className="flex h-full w-full flex-col items-center justify-center rounded-full border border-teal/35 bg-ink/82 text-center shadow-teal backdrop-blur"
           animate={reduceMotion ? undefined : { scale: [1, 1.035, 1], boxShadow: ["0 0 24px rgba(55,245,208,0.10)", "0 0 44px rgba(55,245,208,0.24)", "0 0 24px rgba(55,245,208,0.10)"] }}
           transition={{ duration: 5.6, repeat: Infinity, ease: "easeInOut" }}
         >
-          <Network className="h-7 w-7 text-teal" />
-          <span className="mt-2 text-xs font-extrabold text-white">{centerLabel}</span>
+          <Network className="h-6 w-6 text-teal sm:h-7 sm:w-7" />
+          <span className="mt-2 text-[0.68rem] font-extrabold leading-tight text-white sm:text-xs">{centerLabel}</span>
         </motion.div>
       </div>
 
@@ -561,17 +563,17 @@ function FloatingWorkflowHero({ nodes, centerLabel }: { nodes: typeof heroWorkfl
         return (
           <motion.div
             key={node.label}
-            className={`absolute z-50 min-w-36 rounded-2xl border bg-ink/76 p-3 shadow-glow backdrop-blur ${node.className} ${node.tone}`}
+            className={`workflow-node workflow-node-${index} absolute z-50 min-w-0 rounded-2xl border bg-ink/76 p-2 shadow-glow backdrop-blur sm:min-w-36 sm:p-3 ${node.className} ${node.tone}`}
             animate={reduceMotion ? undefined : { y: [0, -5, 0], opacity: [0.86, 1, 0.86] }}
             transition={{ duration: 5.6, delay: index * 0.45, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/8">
-                <Icon className="h-5 w-5" />
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-white/8 sm:h-9 sm:w-9">
+                <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
               </span>
-              <span>
-                <span className="block text-sm font-extrabold text-white">{node.label}</span>
-                <span className="block text-xs font-bold text-white/46">{node.meta}</span>
+              <span className="min-w-0">
+                <span className="block whitespace-nowrap text-xs font-extrabold text-white sm:text-sm">{node.label}</span>
+                <span className="block whitespace-nowrap text-[0.68rem] font-bold text-white/46 sm:text-xs">{node.meta}</span>
               </span>
             </div>
           </motion.div>
@@ -627,20 +629,20 @@ function ArchepatternMethodOrbit({ steps, centerLabel }: { steps: typeof methodS
 
   return (
     <div className="relative grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
-      <div className="relative min-h-[520px] overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] p-8 lg:h-full">
-        <div className="absolute inset-6 rounded-[24px] border border-white/10 bg-[radial-gradient(circle_at_50%_50%,rgba(55,245,208,0.14),transparent_13rem),radial-gradient(circle_at_24%_22%,rgba(77,184,255,0.13),transparent_10rem),linear-gradient(145deg,rgba(12,24,43,0.82),rgba(5,7,13,0.84))]" />
-        <div className="geometric-grid absolute inset-6 opacity-[0.14]" />
+      <div className="method-visual relative min-h-[390px] overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.035] p-5 sm:min-h-[520px] sm:rounded-[32px] sm:p-8 lg:h-full">
+        <div className="absolute inset-4 rounded-[20px] border border-white/10 bg-[radial-gradient(circle_at_50%_50%,rgba(55,245,208,0.14),transparent_13rem),radial-gradient(circle_at_24%_22%,rgba(77,184,255,0.13),transparent_10rem),linear-gradient(145deg,rgba(12,24,43,0.82),rgba(5,7,13,0.84))] sm:inset-6 sm:rounded-[24px]" />
+        <div className="geometric-grid absolute inset-4 opacity-[0.14] sm:inset-6" />
         <motion.div
-          className="absolute inset-14 z-20 rounded-full border border-electric/25"
+          className="absolute inset-12 z-20 rounded-full border border-electric/25 sm:inset-14"
           animate={reduceMotion ? undefined : { rotate: 360 }}
           transition={{ duration: 38, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute inset-24 z-20 rounded-full border border-teal/20"
+          className="absolute inset-20 z-20 rounded-full border border-teal/20 sm:inset-24"
           animate={reduceMotion ? undefined : { rotate: -360 }}
           transition={{ duration: 52, repeat: Infinity, ease: "linear" }}
         />
-        <div className="absolute left-1/2 top-1/2 z-30 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold/30 bg-ink/75 text-center text-lg font-extrabold text-white shadow-glow">
+        <div className="absolute left-1/2 top-1/2 z-30 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold/30 bg-ink/75 text-center text-sm font-extrabold leading-tight text-white shadow-glow sm:h-32 sm:w-32 sm:text-lg">
           {centerLabel}
         </div>
         {steps.map((step, index) => {
@@ -648,11 +650,11 @@ function ArchepatternMethodOrbit({ steps, centerLabel }: { steps: typeof methodS
           return (
             <motion.div
               key={step.title}
-              className={`absolute z-40 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/12 bg-ink/80 text-teal backdrop-blur ${methodNodePositions[index]}`}
+              className={`method-node method-node-${index} absolute z-40 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/12 bg-ink/80 text-teal backdrop-blur sm:h-16 sm:w-16 ${methodNodePositions[index]}`}
               animate={reduceMotion ? undefined : { scale: [1, 1.06, 1], borderColor: ["rgba(255,255,255,0.12)", "rgba(55,245,208,0.42)", "rgba(255,255,255,0.12)"] }}
               transition={{ duration: 5.8, delay: index * 0.32, repeat: Infinity, ease: "easeInOut" }}
             >
-              <Icon className="h-7 w-7" />
+              <Icon className="h-5 w-5 sm:h-7 sm:w-7" />
             </motion.div>
           );
         })}
@@ -769,7 +771,7 @@ function BringUsTheMessPanel({
 function UseCaseMap({ items, lang }: { items: typeof useCases; lang: Lang }) {
   return (
     <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch">
-      <AssetVisual src="assets/use-cases-map.png" className="min-h-[420px] lg:h-full" lang={lang} />
+      <AssetVisual src="assets/use-cases-map.png" className="min-h-[300px] sm:min-h-[420px] lg:h-full" lang={lang} />
       <div className="grid gap-4 sm:grid-cols-2 lg:auto-rows-fr">
         {items.map(([title, text, Icon]) => (
           <div key={title as string} className="glass-panel flex flex-col justify-center rounded-2xl p-5">
@@ -797,7 +799,7 @@ function ExampleSystemsShowcase({ items, lang }: { items: typeof examples; lang:
           </article>
         ))}
       </div>
-      <AssetVisual src="assets/system-mockup.png" className="min-h-[420px] lg:h-full" lang={lang} />
+      <AssetVisual src="assets/system-mockup.png" className="min-h-[300px] sm:min-h-[420px] lg:h-full" lang={lang} />
     </div>
   );
 }
@@ -827,7 +829,7 @@ function DiagnosticCTA({ copy, lang }: { copy: typeof ui.ar; lang: Lang }) {
             <span className="text-sm font-semibold text-white/54">{copy.diagnosticNote}</span>
           </div>
         </div>
-        <AssetVisual src="assets/audit-cta.png" className="min-h-[380px] lg:h-full" lang={lang} />
+        <AssetVisual src="assets/audit-cta.png" className="min-h-[300px] sm:min-h-[380px] lg:h-full" lang={lang} />
       </div>
     </div>
   );
@@ -875,7 +877,7 @@ function ContactForm({ copy, lang }: { copy: typeof ui.ar; lang: Lang }) {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
-      <AssetVisual src="assets/contact-booking.png" className="min-h-[460px] lg:h-full" lang={lang} />
+      <AssetVisual src="assets/contact-booking.png" className="min-h-[320px] sm:min-h-[460px] lg:h-full" lang={lang} />
       <form onSubmit={onSubmit} className="glass-panel rounded-[28px] p-5 md:p-7">
         <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
         <div className="grid gap-4 sm:grid-cols-2">
@@ -963,12 +965,12 @@ export default function Home() {
       <div className="geometric-grid pointer-events-none absolute inset-x-0 top-0 h-[900px] opacity-45" />
 
       <header className="sticky top-0 z-[80] border-b border-white/10 bg-ink/72 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-6">
-          <a href="#hero" className="flex items-center gap-3">
-            <span className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-teal/25 bg-white/[0.035] p-1 shadow-teal">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3 sm:gap-4 sm:px-4 sm:py-4 md:px-6">
+          <a href="#hero" className="flex min-w-0 items-center gap-2 sm:gap-3">
+            <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-teal/25 bg-white/[0.035] p-1 shadow-teal sm:h-11 sm:w-11">
               <img src="assets/archepattern-logo-mark.png" alt="" className="h-full w-full object-contain" />
             </span>
-            <span className="text-lg font-extrabold text-white">Archepattern</span>
+            <span className="hidden text-lg font-extrabold text-white min-[430px]:block">Archepattern</span>
           </a>
           <div className="hidden items-center gap-1 lg:flex">
             {nav.map(([label, id]) => (
@@ -977,15 +979,15 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
             <button
               type="button"
               onClick={switchLanguage}
-              className="rounded-full border border-white/15 bg-white/[0.045] px-4 py-3 text-sm font-bold text-white/70 transition hover:border-teal/40 hover:text-white"
+              className="rounded-full border border-white/15 bg-white/[0.045] px-3 py-2.5 text-xs font-bold text-white/70 transition hover:border-teal/40 hover:text-white sm:px-4 sm:py-3 sm:text-sm"
             >
               {copy.switchLabel}
             </button>
-            <ButtonLink href="#diagnostic" lang={lang}>{copy.navCta}</ButtonLink>
+            <ButtonLink href="#diagnostic" lang={lang} className="!px-3 !py-2.5 !text-xs sm:!px-5 sm:!py-3 sm:!text-sm">{copy.navCta}</ButtonLink>
           </div>
         </nav>
       </header>
@@ -1004,8 +1006,8 @@ export default function Home() {
           <h1
             className={`mt-7 font-extrabold text-white ${
               isArabic
-                ? "max-w-4xl text-[2.85rem] leading-[1.32] sm:text-5xl md:text-6xl md:leading-[1.28] xl:text-[4.35rem] xl:leading-[1.24]"
-                : "max-w-[680px] text-[2.8rem] leading-[1.08] sm:text-5xl md:text-[3.6rem] md:leading-[1.07] xl:text-[4.05rem] xl:leading-[1.06]"
+                ? "max-w-4xl text-[2.35rem] leading-[1.34] sm:text-5xl md:text-6xl md:leading-[1.28] xl:text-[4.35rem] xl:leading-[1.24]"
+                : "max-w-[680px] text-[2.35rem] leading-[1.12] sm:text-5xl md:text-[3.6rem] md:leading-[1.07] xl:text-[4.05rem] xl:leading-[1.06]"
             }`}
           >
             {copy.heroTitle}
