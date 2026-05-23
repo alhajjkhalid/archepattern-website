@@ -111,7 +111,7 @@ body {
 
 @media (max-width: 639px) {
   .workflow-visual {
-    min-height: 520px;
+    min-height: 0;
   }
 
   .workflow-node {

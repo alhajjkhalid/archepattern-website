@@ -514,7 +514,30 @@ function FloatingWorkflowHero({ nodes, centerLabel }: { nodes: typeof heroWorkfl
   const reduceMotion = useReducedMotion();
 
   return (
-    <div className="workflow-visual relative min-h-[410px] overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.035] p-3 shadow-glow sm:min-h-[520px] sm:rounded-[34px] sm:p-4">
+    <div className="workflow-visual relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.035] p-4 shadow-glow sm:min-h-[520px] sm:rounded-[34px]">
+      <div className="relative z-50 grid gap-3 sm:hidden">
+        <div className="mx-auto mb-1 flex h-24 w-24 flex-col items-center justify-center rounded-full border border-teal/35 bg-ink/82 text-center shadow-teal backdrop-blur">
+          <Network className="h-6 w-6 text-teal" />
+          <span className="mt-2 text-[0.68rem] font-extrabold leading-tight text-white">{centerLabel}</span>
+        </div>
+        {nodes.map((node) => {
+          const Icon = node.icon;
+          return (
+            <div key={node.label} className={`rounded-2xl border bg-ink/76 p-3 shadow-glow backdrop-blur ${node.tone}`}>
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/8">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="block text-sm font-extrabold text-white">{node.label}</span>
+                  <span className="block text-xs font-bold text-white/46">{node.meta}</span>
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
       <div className="absolute inset-3 overflow-hidden rounded-[20px] border border-white/10 bg-ink sm:inset-4 sm:rounded-[26px]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(55,245,208,0.16),transparent_18rem),radial-gradient(circle_at_22%_16%,rgba(77,184,255,0.14),transparent_13rem),linear-gradient(135deg,rgba(12,24,43,0.98),rgba(5,7,13,0.96))]" />
         <div className="absolute inset-0 geometric-grid opacity-[0.18]" />
@@ -522,7 +545,7 @@ function FloatingWorkflowHero({ nodes, centerLabel }: { nodes: typeof heroWorkfl
         <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-electric/10 sm:h-48 sm:w-48" />
       </div>
 
-      <svg className="pointer-events-none absolute inset-0 z-40 h-full w-full" viewBox="0 0 640 520" preserveAspectRatio="none" aria-hidden="true">
+      <svg className="pointer-events-none absolute inset-0 z-40 hidden h-full w-full sm:block" viewBox="0 0 640 520" preserveAspectRatio="none" aria-hidden="true">
         <path d="M480 96 C424 132 372 190 320 260" stroke="rgba(55,245,208,0.34)" strokeWidth="1.5" fill="none" />
         <path d="M164 118 C218 150 270 198 320 260" stroke="rgba(77,184,255,0.32)" strokeWidth="1.5" fill="none" />
         <path d="M482 406 C426 376 372 324 320 260" stroke="rgba(214,181,109,0.30)" strokeWidth="1.5" fill="none" />
@@ -547,7 +570,7 @@ function FloatingWorkflowHero({ nodes, centerLabel }: { nodes: typeof heroWorkfl
         })}
       </svg>
 
-      <div className="absolute left-1/2 top-1/2 z-50 h-24 w-24 -translate-x-1/2 -translate-y-1/2 sm:h-28 sm:w-28">
+      <div className="absolute left-1/2 top-1/2 z-50 hidden h-24 w-24 -translate-x-1/2 -translate-y-1/2 sm:block sm:h-28 sm:w-28">
         <motion.div
           className="flex h-full w-full flex-col items-center justify-center rounded-full border border-teal/35 bg-ink/82 text-center shadow-teal backdrop-blur"
           animate={reduceMotion ? undefined : { scale: [1, 1.035, 1], boxShadow: ["0 0 24px rgba(55,245,208,0.10)", "0 0 44px rgba(55,245,208,0.24)", "0 0 24px rgba(55,245,208,0.10)"] }}
@@ -563,7 +586,7 @@ function FloatingWorkflowHero({ nodes, centerLabel }: { nodes: typeof heroWorkfl
         return (
           <motion.div
             key={node.label}
-            className={`workflow-node workflow-node-${index} absolute z-50 min-w-0 rounded-2xl border bg-ink/76 p-2 shadow-glow backdrop-blur sm:min-w-36 sm:p-3 ${node.className} ${node.tone}`}
+            className={`workflow-node workflow-node-${index} absolute z-50 hidden min-w-0 rounded-2xl border bg-ink/76 p-2 shadow-glow backdrop-blur sm:block sm:min-w-36 sm:p-3 ${node.className} ${node.tone}`}
             animate={reduceMotion ? undefined : { y: [0, -5, 0], opacity: [0.86, 1, 0.86] }}
             transition={{ duration: 5.6, delay: index * 0.45, repeat: Infinity, ease: "easeInOut" }}
           >
