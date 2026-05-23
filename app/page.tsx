@@ -968,7 +968,7 @@ export default function Home() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3 sm:gap-4 sm:px-4 sm:py-4 md:px-6">
           <a href="#hero" className="flex min-w-0 items-center">
             <span className="relative block h-10 w-36 shrink-0 overflow-hidden sm:h-12 sm:w-44">
-              <img src="assets/Logos/Dark.png" alt="Archepattern" className="h-full w-full object-cover object-center mix-blend-screen" />
+              <img src="assets/Logos/Dark.png" alt="Archepattern" className="h-full w-full object-cover object-center" />
             </span>
           </a>
           <div className="hidden items-center gap-1 lg:flex">
@@ -1112,7 +1112,7 @@ export default function Home() {
           <div>
             <div className="flex items-center">
               <span className="relative block h-14 w-48 overflow-hidden">
-                <img src="assets/Logos/Dark.png" alt="Archepattern" className="h-full w-full object-cover object-center mix-blend-screen" />
+                <img src="assets/Logos/Dark.png" alt="Archepattern" className="h-full w-full object-cover object-center" />
               </span>
             </div>
             <p className="mt-2 text-white/55">{copy.footerText}</p>
