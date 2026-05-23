@@ -967,7 +967,7 @@ export default function Home() {
       <header className="sticky top-0 z-[80] border-b border-white/10 bg-ink/72 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3 sm:gap-4 sm:px-4 sm:py-4 md:px-6">
           <a href="#hero" className="flex min-w-0 items-center">
-            <span className="relative block h-12 w-56 shrink-0 overflow-hidden sm:h-14 sm:w-64">
+            <span className="relative block h-10 w-40 shrink-0 overflow-hidden sm:h-14 sm:w-64">
               <img src="assets/Logos/Dark-cropped.png" alt="Archepattern" className="h-full w-full object-contain object-center" />
             </span>
           </a>
@@ -986,7 +986,7 @@ export default function Home() {
             >
               {copy.switchLabel}
             </button>
-            <ButtonLink href="#diagnostic" lang={lang} className="!px-3 !py-2.5 !text-xs sm:!px-5 sm:!py-3 sm:!text-sm">{copy.navCta}</ButtonLink>
+            <ButtonLink href="#diagnostic" lang={lang} className="hidden !px-3 !py-2.5 !text-xs sm:inline-flex sm:!px-5 sm:!py-3 sm:!text-sm">{copy.navCta}</ButtonLink>
           </div>
         </nav>
       </header>

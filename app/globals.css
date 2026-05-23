@@ -110,28 +110,37 @@ body {
 }
 
 @media (max-width: 639px) {
+  .workflow-visual {
+    min-height: 520px;
+  }
+
   .workflow-node {
-    max-width: calc(50% - 1.25rem);
+    max-width: none;
+    width: min(15rem, calc(100% - 3rem));
   }
 
   .workflow-node-0 {
     top: 1.25rem !important;
-    right: 1rem !important;
+    right: 1.5rem !important;
+    left: auto !important;
   }
 
   .workflow-node-1 {
-    top: 5.75rem !important;
-    left: 1rem !important;
+    top: 8rem !important;
+    left: 1.5rem !important;
+    right: auto !important;
   }
 
   .workflow-node-2 {
-    right: 1rem !important;
-    bottom: 5.75rem !important;
+    right: 1.5rem !important;
+    bottom: 8rem !important;
+    left: auto !important;
   }
 
   .workflow-node-3 {
-    left: 1rem !important;
+    left: 1.5rem !important;
     bottom: 1.25rem !important;
+    right: auto !important;
   }
 
   .method-node-0 {
