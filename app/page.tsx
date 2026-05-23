@@ -966,11 +966,10 @@ export default function Home() {
 
       <header className="sticky top-0 z-[80] border-b border-white/10 bg-ink/72 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3 sm:gap-4 sm:px-4 sm:py-4 md:px-6">
-          <a href="#hero" className="flex min-w-0 items-center gap-2 sm:gap-3">
-            <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-teal/25 bg-white/[0.035] p-1 shadow-teal sm:h-11 sm:w-11">
-              <img src="assets/archepattern-logo-mark.png" alt="" className="h-full w-full object-contain" />
+          <a href="#hero" className="flex min-w-0 items-center">
+            <span className="relative block h-10 w-36 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black shadow-teal sm:h-12 sm:w-44">
+              <img src="assets/Logos/Dark.png" alt="Archepattern" className="h-full w-full object-cover object-center" />
             </span>
-            <span className="hidden text-lg font-extrabold text-white min-[430px]:block">Archepattern</span>
           </a>
           <div className="hidden items-center gap-1 lg:flex">
             {nav.map(([label, id]) => (
@@ -1111,11 +1110,10 @@ export default function Home() {
       <footer className="border-t border-white/10 px-4 py-10 md:px-6">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-teal/20 bg-white/[0.035] p-1">
-                <img src="assets/archepattern-logo-mark.png" alt="" className="h-full w-full object-contain" />
+            <div className="flex items-center">
+              <span className="relative block h-14 w-48 overflow-hidden rounded-xl border border-white/10 bg-black shadow-teal">
+                <img src="assets/Logos/Dark.png" alt="Archepattern" className="h-full w-full object-cover object-center" />
               </span>
-              <p className="text-xl font-extrabold text-white">Archepattern</p>
             </div>
             <p className="mt-2 text-white/55">{copy.footerText}</p>
           </div>
