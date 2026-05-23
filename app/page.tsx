@@ -835,10 +835,40 @@ function DiagnosticCTA({ copy, lang }: { copy: typeof ui.ar; lang: Lang }) {
 
 function ContactForm({ copy, lang }: { copy: typeof ui.ar; lang: Lang }) {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSent(true);
+    setSent(false);
+    setError(false);
+    setSubmitting(true);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "");
+    formData.append("subject", "New contact request from Archepattern website");
+    formData.append("from_name", "Archepattern Website");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error("Web3Forms submission failed");
+      }
+
+      form.reset();
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const inputClass = `w-full rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-3 ${lang === "ar" ? "text-right" : "text-left"} text-white outline-none transition placeholder:text-white/32 focus:border-teal/50 focus:bg-white/[0.07]`;
@@ -847,25 +877,39 @@ function ContactForm({ copy, lang }: { copy: typeof ui.ar; lang: Lang }) {
     <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
       <AssetVisual src="assets/contact-booking.png" className="min-h-[460px] lg:h-full" lang={lang} />
       <form onSubmit={onSubmit} className="glass-panel rounded-[28px] p-5 md:p-7">
+        <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
         <div className="grid gap-4 sm:grid-cols-2">
-          {copy.formLabels.map((label) => (
+          {copy.formLabels.map((label, index) => (
             <label key={label} className="block">
               <span className="mb-2 block text-sm font-bold text-white/68">{label}</span>
-              <input className={inputClass} required />
+              <input
+                name={index === 0 ? "name" : "contact"}
+                type={index === 0 ? "text" : "text"}
+                className={inputClass}
+                required
+              />
             </label>
           ))}
         </div>
         <label className="mt-4 block">
           <span className="mb-2 block text-sm font-bold text-white/68">{copy.problemLabel}</span>
-          <textarea className={`${inputClass} min-h-44 resize-y`} required />
+          <textarea name="message" className={`${inputClass} min-h-44 resize-y`} required />
         </label>
-        <button className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal px-6 py-4 text-sm font-extrabold text-ink transition hover:bg-white sm:w-auto">
-          {copy.submitLabel}
+        <button
+          disabled={submitting}
+          className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal px-6 py-4 text-sm font-extrabold text-ink transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        >
+          {submitting ? (lang === "ar" ? "جاري الإرسال..." : "Sending...") : copy.submitLabel}
           <Send className="h-4 w-4" />
         </button>
         {sent ? (
           <p className="mt-5 rounded-2xl border border-teal/25 bg-teal/10 p-4 font-bold text-teal">
             {copy.sentMessage}
+          </p>
+        ) : null}
+        {error ? (
+          <p className="mt-5 rounded-2xl border border-red-300/25 bg-red-300/10 p-4 font-bold text-red-200">
+            {lang === "ar" ? "تعذر إرسال الطلب. يرجى المحاولة مرة أخرى." : "We could not send the request. Please try again."}
           </p>
         ) : null}
       </form>
