@@ -967,7 +967,7 @@ export default function Home() {
       <header className="sticky top-0 z-[80] border-b border-white/10 bg-ink/72 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3 sm:gap-4 sm:px-4 sm:py-4 md:px-6">
           <a href="#hero" className="flex min-w-0 items-center">
-            <span className="relative block h-10 w-36 shrink-0 overflow-hidden sm:h-12 sm:w-44">
+            <span className="relative block h-14 w-48 shrink-0 overflow-hidden sm:h-16 sm:w-56">
               <img src="assets/Logos/Dark.png" alt="Archepattern" className="h-full w-full object-cover object-center" />
             </span>
           </a>
@@ -1111,7 +1111,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <div className="flex items-center">
-              <span className="relative block h-14 w-48 overflow-hidden">
+              <span className="relative block h-16 w-56 overflow-hidden">
                 <img src="assets/Logos/Dark.png" alt="Archepattern" className="h-full w-full object-cover object-center" />
               </span>
             </div>
