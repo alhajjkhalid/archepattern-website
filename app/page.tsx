@@ -1052,7 +1052,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <FloatingWorkflowHero nodes={heroNodes} centerLabel={copy.heroCenter} />
+        <div className="hidden sm:block">
+          <FloatingWorkflowHero nodes={heroNodes} centerLabel={copy.heroCenter} />
+        </div>
       </section>
 
       <SectionReveal id="problem" className="mx-auto max-w-7xl px-4 py-16 md:px-6">
