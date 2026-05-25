@@ -37,6 +37,7 @@ type Copy = {
   dir: "rtl" | "ltr";
   font: string;
   switchLabel: string;
+  blogLabel: string;
   nav: Array<[string, string]>;
   cta: string;
   badge: string;
@@ -74,6 +75,7 @@ const copy: Record<Lang, Copy> = {
     dir: "rtl",
     font: "font-arabic text-right",
     switchLabel: "English",
+    blogLabel: "المدونة",
     nav: [
       ["الحلول", "services"],
       ["الطريقة", "workflow"],
@@ -156,6 +158,7 @@ const copy: Record<Lang, Copy> = {
     dir: "ltr",
     font: "font-latin text-left",
     switchLabel: "العربية",
+    blogLabel: "Blog",
     nav: [
       ["Solutions", "services"],
       ["Method", "workflow"],
@@ -418,6 +421,9 @@ export default function Home() {
                 {label}
               </a>
             ))}
+            <a href="/blog" className="rounded-lg px-4 py-2 text-sm font-bold text-white/58 transition hover:bg-white/8 hover:text-white">
+              {text.blogLabel}
+            </a>
           </div>
           <div className="flex shrink-0 items-center gap-2">
             <button
@@ -564,6 +570,9 @@ export default function Home() {
             <img src="assets/Logos/Dark-cropped.png" alt="Archepattern" className="h-full w-full object-contain object-center" />
           </span>
           <p className="max-w-2xl text-sm font-semibold text-white/55">{text.footerText}</p>
+          <a href="/blog" className="text-sm font-extrabold text-teal transition hover:text-white">
+            {text.blogLabel}
+          </a>
         </div>
       </footer>
     </main>
