@@ -77,9 +77,9 @@ const copy: Record<Lang, Copy> = {
     nav: [
       ["الحلول", "services"],
       ["الطريقة", "workflow"],
-      ["المراجعة", "review"]
+      ["التقييم", "review"]
     ],
-    cta: "اطلب مراجعة مجانية",
+    cta: "اطلب تقييمًا مجانيًا",
     badge: "ذكاء اصطناعي وأتمتة للشركات",
     heroTitle: "حوّل العمل المتكرر إلى نظام ذكي يعمل عنك",
     heroText:
@@ -138,7 +138,7 @@ const copy: Record<Lang, Copy> = {
       ["المساعدات الذكية", Bot],
       ["ربط الأنظمة", Network]
     ],
-    reviewEyebrow: "مراجعة مجانية",
+    reviewEyebrow: "تقييم مجاني",
     reviewTitle: "أرسل لنا العملية المزعجة",
     reviewText:
       "لا تحتاج تجهيز عرض أو معرفة اسم التقنية. اشرح ما يحدث اليوم، وسنقترح طريقة أبسط لتشغيله.",
@@ -159,9 +159,9 @@ const copy: Record<Lang, Copy> = {
     nav: [
       ["Solutions", "services"],
       ["Method", "workflow"],
-      ["Review", "review"]
+      ["Assessment", "review"]
     ],
-    cta: "Request a Free Review",
+    cta: "Request a Free Assessment",
     badge: "AI and automation for business",
     heroTitle: "Turn repeated work into an intelligent system",
     heroText:
@@ -220,7 +220,7 @@ const copy: Record<Lang, Copy> = {
       ["AI Assistants", Bot],
       ["Integrations", Network]
     ],
-    reviewEyebrow: "Free Review",
+    reviewEyebrow: "Free Assessment",
     reviewTitle: "Send us the annoying process",
     reviewText:
       "No deck or technical language needed. Explain what happens today, and we will suggest a simpler way to run it.",
@@ -435,13 +435,17 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="hero" className="relative mx-auto grid max-w-7xl gap-10 overflow-hidden px-4 pb-14 pt-14 md:px-6 md:pb-20 md:pt-20 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <section id="hero" className="relative mx-auto grid max-w-7xl gap-10 overflow-hidden px-4 pb-14 pt-14 md:px-6 md:pb-20 md:pt-20 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
         <div className="relative z-10 min-w-0">
           <div className="inline-flex items-center gap-2 rounded-lg border border-gold/25 bg-gold/10 px-4 py-2 text-sm font-bold text-gold">
             <Zap className="h-4 w-4" />
             {text.badge}
           </div>
-          <h1 className="mt-6 max-w-full text-[2.1rem] font-extrabold leading-tight text-white sm:text-5xl md:text-6xl">
+          <h1
+            className={`mt-6 max-w-full text-[2.1rem] font-extrabold text-white sm:text-5xl md:text-6xl ${
+              lang === "ar" ? "leading-[1.35] md:leading-[1.3]" : "leading-[1.08] md:leading-[1.06]"
+            }`}
+          >
             {text.heroTitle}
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/74 md:text-xl md:leading-9">{text.heroText}</p>
@@ -466,7 +470,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative min-w-0 overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-glow max-sm:min-h-[320px] sm:min-h-[500px]">
+        <div className="relative min-w-0 overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-glow max-sm:min-h-[320px] sm:min-h-[500px] lg:mt-[5.4rem]">
           <img src="assets/hero-command-center.png" alt={visualAlt[lang]} className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
           <div className="absolute bottom-5 left-5 right-5 grid gap-3 sm:grid-cols-2">
