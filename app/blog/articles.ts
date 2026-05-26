@@ -363,6 +363,460 @@ export const blogArticles: BlogArticle[] = [
       "وكلاء الذكاء الاصطناعي يمكن أن يساعدوا المنشآت الصغيرة والمتوسطة في السعودية والشرق الأوسط على تشغيل أعمالها بوضوح وسرعة أكبر.",
       "النجاح لا يأتي من بناء وكيل يفعل كل شيء، بل من وكيل صغير يخدم عملية واضحة، يعمل مع الإنسان، ويتحسن مع الاستخدام اليومي."
     ]
+  },
+  {
+    slug: "n8n-automation-middle-east-smes",
+    title: "n8n automation للمنشآت الصغيرة والمتوسطة في الشرق الأوسط",
+    description:
+      "دليل عربي عملي يشرح كيف تستخدم المنشآت الصغيرة والمتوسطة n8n automation لربط واتساب، CRM، Google Sheets، Airtable، البريد، وOpenAI في سير عمل واحد.",
+    date: "2026-05-26",
+    readTime: "7 دقائق قراءة",
+    category: "n8n automation",
+    image: "/assets/solutions-overview.png",
+    keywords: [
+      "n8n automation",
+      "n8n workflow",
+      "n8n Middle East",
+      "n8n Arabic",
+      "workflow automation",
+      "business automation",
+      "OpenAI n8n",
+      "WhatsApp n8n",
+      "CRM automation",
+      "Google Sheets automation"
+    ],
+    intro: [
+      "كثير من أصحاب المنشآت في الشرق الأوسط يبحثون اليوم عن n8n automation لأنهم يريدون ربط أدواتهم بدون بناء نظام كامل من الصفر. الفكرة بسيطة: عندما يحدث شيء في أداة، مثل وصول طلب من موقع أو واتساب، يقوم n8n بتشغيل خطوات تلقائية بين الأنظمة.",
+      "الميزة في n8n أنه مناسب لسير العمل العملي: ربط Google Sheets مع HubSpot أو Zoho CRM، إرسال تنبيه إلى Slack أو Microsoft Teams، إنشاء مهمة في Trello أو ClickUp، أو تمرير رسالة إلى OpenAI وChatGPT لاستخراج البيانات وتلخيصها."
+    ],
+    sections: [
+      {
+        heading: "ما هو n8n ولماذا يبحث عنه العملاء؟",
+        paragraphs: [
+          "n8n هو أداة workflow automation تسمح ببناء مسارات عمل بين التطبيقات. يمكن استخدامه مع APIs، webhooks، قواعد البيانات، البريد الإلكتروني، Google Workspace، Microsoft 365، Airtable، Notion، HubSpot، Zoho، Odoo، Shopify، WooCommerce، وOpenAI.",
+          "عميل يبحث عن n8n automation لا يبحث فقط عن أداة، بل يبحث غالبا عن شخص يفهم عملياته ويستطيع تحويلها إلى workflow واضح. لذلك يجب أن يظهر المحتوى عبارات مثل n8n workflow، n8n integration، n8n consultant، وn8n automation agency بجانب الشرح العربي."
+        ],
+        bullets: [
+          "ربط النماذج والمواقع مع CRM أو Google Sheets.",
+          "تشغيل تنبيهات واتساب أو بريد عند وصول طلب جديد.",
+          "استخدام OpenAI أو ChatGPT لتصنيف الرسائل وتلخيصها.",
+          "إنشاء تقارير تلقائية من البيانات اليومية."
+        ]
+      },
+      {
+        heading: "أمثلة n8n automation تناسب السوق العربي",
+        paragraphs: [
+          "شركة خدمات في دبي أو الرياض أو الدوحة يمكنها أن تستخدم n8n لالتقاط طلب من نموذج موقع، إرسال رسالة تأكيد، إنشاء صف في Airtable، إضافة lead في HubSpot CRM، ثم تنبيه فريق المبيعات في Slack.",
+          "متجر إلكتروني يعمل على Shopify أو WooCommerce يمكنه ربط الطلبات مع Google Sheets، إرسال تحديثات للعميل، إنشاء تذكرة دعم، وتوليد ملخص يومي للمبيعات باستخدام OpenAI. هذه أمثلة يبحث عنها العملاء بعبارات مثل Shopify automation وWooCommerce automation وecommerce automation."
+        ]
+      },
+      {
+        heading: "n8n مع WhatsApp Business API",
+        paragraphs: [
+          "واحدة من أكثر حالات الاستخدام طلبا في الشرق الأوسط هي WhatsApp automation. يمكن ربط WhatsApp Business API مع n8n لاستقبال الرسائل، تصنيف الطلبات، إرسال ردود أولية، وتحويل الحالات المهمة إلى فريق المبيعات أو الدعم.",
+          "الأفضل ألا يكون الرد الآلي عاما. يجب أن يعرف النظام نوع الخدمة، المدينة، اللغة، حالة العميل، ومتى يحول المحادثة إلى موظف. هنا يصبح n8n جزءا من تجربة العميل وليس مجرد أداة خلفية."
+        ]
+      },
+      {
+        heading: "متى يكون n8n أفضل من Zapier أو Make؟",
+        paragraphs: [
+          "n8n مناسب عندما تحتاج مرونة أعلى، منطق أكثر تعقيدا، أو تحكم أكبر في البيانات. Zapier ممتاز للربط السريع بين أدوات جاهزة، وMake مناسب لبناء سيناريوهات بصرية، أما n8n فيناسب المشاريع التي تحتاج APIs مخصصة أو self-hosted automation.",
+          "لا توجد أداة واحدة صحيحة لكل حالة. الاختيار يعتمد على ميزانية المنشأة، حساسية البيانات، عدد العمليات، والأنظمة الموجودة مثل Odoo ERP أو Zoho CRM أو HubSpot CRM."
+        ]
+      }
+    ],
+    conclusion: [
+      "n8n automation فرصة قوية للمنشآت الصغيرة والمتوسطة في الشرق الأوسط لأنها تجمع بين المرونة والتكلفة المعقولة وربط الأدوات الموجودة.",
+      "النجاح لا يأتي من تركيب n8n فقط، بل من تصميم workflow يخدم المبيعات، الدعم، العمليات، والتقارير بطريقة يفهمها الفريق ويستطيع قياس أثرها."
+    ]
+  },
+  {
+    slug: "make-zapier-n8n-comparison-middle-east",
+    title: "Make وZapier وn8n: أي أداة Automation تناسب منشأتك؟",
+    description:
+      "مقارنة عملية بين Make automation وZapier وn8n للمنشآت الصغيرة والمتوسطة في الشرق الأوسط، مع أمثلة لاختيار الأداة المناسبة.",
+    date: "2026-05-26",
+    readTime: "7 دقائق قراءة",
+    category: "Automation tools",
+    image: "/assets/system-mockup.png",
+    keywords: [
+      "Make automation",
+      "Zapier automation",
+      "n8n automation",
+      "Make vs Zapier",
+      "Zapier alternative",
+      "workflow automation tools",
+      "automation agency Middle East",
+      "business process automation"
+    ],
+    intro: [
+      "عندما يبدأ صاحب منشأة في البحث عن automation tools تظهر أسماء متكررة: Make، Zapier، وn8n. كل أداة تستطيع ربط التطبيقات وتشغيل خطوات تلقائية، لكن الفرق يظهر عندما تصبح العملية أكثر تعقيدا أو عندما تحتاج المنشأة تحكما أكبر في البيانات.",
+      "المهم ليس اختيار الاسم الأشهر، بل اختيار الأداة التي تناسب طريقة العمل. منشأة صغيرة في الشرق الأوسط قد تحتاج ربط WhatsApp Business API مع Google Sheets وZoho CRM اليوم، ثم إضافة OpenAI وPower BI لاحقا."
+    ],
+    sections: [
+      {
+        heading: "Zapier: مناسب للربط السريع",
+        paragraphs: [
+          "Zapier automation مفيد عندما تحتاج ربطا سريعا بين تطبيقات جاهزة مثل Gmail، Google Sheets، HubSpot، Trello، Slack، Mailchimp، Shopify، أو Typeform. قوته في سهولة الإطلاق وعدد التكاملات الكبير.",
+          "لكن عندما يزيد المنطق الشرطي أو تحتاج معالجة بيانات معقدة، قد يصبح Zapier أقل مرونة أو أعلى تكلفة. لذلك يبحث بعض العملاء عن Zapier alternative أو بدائل مثل Make وn8n."
+        ],
+        bullets: [
+          "مناسب للمهام البسيطة والمتوسطة.",
+          "جيد للفرق التي تريد إطلاقا سريعا.",
+          "قوي في integrations الجاهزة.",
+          "قد يصبح مكلفا مع كثرة المهام."
+        ]
+      },
+      {
+        heading: "Make: سيناريوهات بصرية ومرونة جيدة",
+        paragraphs: [
+          "Make automation، والذي كان يعرف سابقا باسم Integromat، مناسب لمن يريد بناء scenario بصري يرى فيه كل خطوة. يمكن استخدام Make مع Airtable وGoogle Sheets وWooCommerce وShopify وTelegram وSlack وHubSpot وZoho.",
+          "Make قوي في التعامل مع البيانات والتفرعات، لذلك يناسب حالات مثل معالجة الطلبات، تحديث مخزون، إرسال إشعارات، أو ربط المتجر الإلكتروني مع خدمة العملاء."
+        ]
+      },
+      {
+        heading: "n8n: مرونة أعلى وتخصيص أكبر",
+        paragraphs: [
+          "n8n automation يناسب المشاريع التي تحتاج تحكما أكبر، مثل استخدام Webhooks وAPIs مخصصة، ربط قواعد بيانات، أو تشغيل workflows فيها خطوات ذكاء اصطناعي باستخدام OpenAI أو ChatGPT أو Claude أو Gemini.",
+          "في بعض الحالات، تفضله المنشآت التي تهتم بالاستضافة الذاتية self-hosted automation أو تريد تقليل الاعتماد على منصات SaaS خارجية. هذا مهم لبعض القطاعات في الخليج والشرق الأوسط التي تهتم بخصوصية البيانات."
+        ]
+      },
+      {
+        heading: "كيف تختار الأداة؟",
+        paragraphs: [
+          "ابدأ من العملية، لا من الأداة. إذا كانت المهمة بسيطة مثل نقل بيانات من نموذج إلى Google Sheet، قد يكفي Zapier. إذا كانت العملية فيها تفرعات ورسائل متعددة، قد يناسبك Make. إذا كنت تحتاج APIs مخصصة أو تحكم أكبر، فكر في n8n.",
+          "الشريك التقني الجيد لا يبيعك أداة واحدة. هو يحدد متى تستخدم Zapier، متى تستخدم Make، متى تستخدم n8n، ومتى يكون الحل الأفضل هو نظام داخلي مخصص."
+        ]
+      }
+    ],
+    conclusion: [
+      "Make وZapier وn8n كلها أدوات قوية، لكن قيمتها تظهر عندما توضع داخل تصميم واضح للعمليات.",
+      "للمنشآت الصغيرة والمتوسطة في الشرق الأوسط، أفضل اختيار هو الذي يقلل العمل اليدوي اليوم ويترك مجالا للتوسع غدا."
+    ]
+  },
+  {
+    slug: "crm-automation-hubspot-zoho-pipedrive-middle-east",
+    title: "CRM Automation باستخدام HubSpot وZoho وPipedrive للشرق الأوسط",
+    description:
+      "كيف تساعد أتمتة CRM باستخدام HubSpot CRM وZoho CRM وPipedrive المنشآت الصغيرة والمتوسطة على متابعة العملاء والمبيعات بدون فوضى.",
+    date: "2026-05-26",
+    readTime: "7 دقائق قراءة",
+    category: "CRM automation",
+    image: "/assets/contact-booking.png",
+    keywords: [
+      "CRM automation",
+      "HubSpot CRM",
+      "Zoho CRM",
+      "Pipedrive",
+      "lead management",
+      "sales automation",
+      "CRM implementation",
+      "WhatsApp CRM integration",
+      "Middle East CRM"
+    ],
+    intro: [
+      "كثير من المنشآت الصغيرة والمتوسطة في الشرق الأوسط تعرف أنها تحتاج CRM، لكنها لا تريد نظاما ثقيلا لا يستخدمه الفريق. لذلك يبحث العملاء عن HubSpot CRM أو Zoho CRM أو Pipedrive مع أتمتة حقيقية لمتابعة العملاء المحتملين.",
+      "CRM automation لا يعني إدخال البيانات فقط. الهدف أن تتحول الاستفسارات من واتساب، الموقع، الحملات الإعلانية، البريد، والمتجر الإلكتروني إلى pipeline واضح فيه حالة العميل، مصدره، المسؤول عنه، والخطوة التالية."
+    ],
+    sections: [
+      {
+        heading: "ما الذي يجب أن يفعله CRM للمنشأة؟",
+        paragraphs: [
+          "نظام CRM الجيد يجمع leads في مكان واحد ويمنع ضياع المتابعة. عندما يصل lead من Facebook Ads أو Google Ads أو WhatsApp Business API أو نموذج موقع، يجب أن ينشأ سجل تلقائيا في HubSpot أو Zoho أو Pipedrive.",
+          "بعد ذلك تبدأ الأتمتة: تعيين مسؤول، إرسال رسالة ترحيب، إنشاء مهمة متابعة، تحديث المرحلة في pipeline، وإظهار تقرير عن سرعة الرد ونسبة التحويل."
+        ],
+        bullets: [
+          "Lead capture من الموقع وواتساب والإعلانات.",
+          "Lead scoring لتحديد العملاء الأعلى أولوية.",
+          "Sales pipeline واضح لكل فرصة.",
+          "Follow-up automation ورسائل تذكير للفريق."
+        ]
+      },
+      {
+        heading: "HubSpot CRM: مناسب للتسويق والمبيعات",
+        paragraphs: [
+          "HubSpot CRM خيار قوي للمنشآت التي تريد جمع التسويق والمبيعات وخدمة العملاء في منصة واحدة. يمكن ربط HubSpot مع نماذج الموقع، البريد، WhatsApp integrations، Calendly، Stripe، Shopify، وأدوات automation مثل Zapier وMake وn8n.",
+          "يبحث العملاء غالبا عن HubSpot implementation أو HubSpot automation لأنهم يريدون شخصا يبني pipeline ورسائل وخصائص العميل بطريقة تناسب السوق المحلي."
+        ]
+      },
+      {
+        heading: "Zoho CRM: خيار واسع للعمليات",
+        paragraphs: [
+          "Zoho CRM منتشر في المنطقة لأنه جزء من منظومة Zoho التي تشمل Zoho Books وZoho Desk وZoho Campaigns وغيرها. يناسب الشركات التي تريد CRM مع محاسبة ودعم وعروض أسعار في بيئة واحدة.",
+          "يمكن ربط Zoho CRM مع WhatsApp، Google Sheets، مواقع WordPress، WooCommerce، وأنظمة داخلية. الأهم أن يتم تصميم الحقول والمراحل بطريقة بسيطة حتى يستخدمها الفريق يوميا."
+        ]
+      },
+      {
+        heading: "Pipedrive: تركيز واضح على المبيعات",
+        paragraphs: [
+          "Pipedrive مناسب للفرق التي تريد إدارة pipeline بسيط وواضح. قوته في متابعة الصفقات والأنشطة، لذلك يفيد شركات الخدمات، التدريب، العقار، الاستشارات، والبيع B2B.",
+          "مع automation tools مثل Make أو Zapier أو n8n يمكن تحويل Pipedrive إلى نظام أكثر قوة: إنشاء deals تلقائيا، إرسال تذكيرات، تحديث مراحل، وربط التقارير مع Looker Studio أو Power BI."
+        ]
+      }
+    ],
+    conclusion: [
+      "CRM automation هو أحد أكثر المشاريع تأثيرا للمنشآت الصغيرة والمتوسطة لأنه يربط التسويق بالمبيعات ويقلل ضياع العملاء.",
+      "سواء اخترت HubSpot أو Zoho أو Pipedrive، الأهم أن يكون النظام مبنيا حول طريقة بيعك الفعلية في السوق، لا حول إعدادات عامة لا يستخدمها الفريق."
+    ]
+  },
+  {
+    slug: "whatsapp-business-api-openai-chatgpt-automation",
+    title: "WhatsApp Business API مع OpenAI وChatGPT لخدمة العملاء والمبيعات",
+    description:
+      "شرح عملي لكيفية استخدام WhatsApp Business API مع OpenAI وChatGPT لبناء مساعدات ذكية تخدم العملاء وتؤهل الطلبات في الشرق الأوسط.",
+    date: "2026-05-26",
+    readTime: "7 دقائق قراءة",
+    category: "WhatsApp AI",
+    image: "/assets/hero-command-center.png",
+    keywords: [
+      "WhatsApp Business API",
+      "WhatsApp automation",
+      "OpenAI",
+      "ChatGPT",
+      "AI chatbot",
+      "WhatsApp chatbot",
+      "customer service automation",
+      "lead qualification",
+      "Arabic chatbot"
+    ],
+    intro: [
+      "في الشرق الأوسط، واتساب ليس قناة إضافية فقط، بل هو القناة الرئيسية للتواصل مع العملاء في قطاعات كثيرة. لذلك يبحث أصحاب المنشآت عن WhatsApp Business API وWhatsApp chatbot وWhatsApp automation لبناء ردود أسرع وتنظيم أفضل.",
+      "عندما تضيف OpenAI أو ChatGPT إلى WhatsApp Business API، يمكن للمساعد أن يفهم الرسائل العربية والإنجليزية، يسأل أسئلة متابعة، يصنف الطلب، ويجهز ملخصا للفريق بدل أن تضيع المحادثات في ضغط اليوم."
+    ],
+    sections: [
+      {
+        heading: "ماذا يضيف OpenAI إلى واتساب؟",
+        paragraphs: [
+          "WhatsApp Business API يتيح استقبال وإرسال الرسائل بطريقة منظمة. OpenAI وChatGPT يضيفان طبقة فهم: تلخيص المحادثة، استخراج اسم العميل والمدينة ونوع الخدمة، تصنيف النية، وتجهيز رد مناسب.",
+          "هذا مهم لأن رسائل العملاء ليست دائما مرتبة. العميل قد يكتب سؤالا طويلا، يرسل صورة، يغير الموضوع، أو يكتب باللهجة المحلية. المساعد الذكي يساعد الفريق على فهم الطلب بسرعة."
+        ],
+        bullets: [
+          "AI chatbot يرد على الأسئلة المتكررة.",
+          "Lead qualification قبل تدخل فريق المبيعات.",
+          "Ticket creation لحالات الدعم.",
+          "Conversation summary عند تحويل المحادثة لموظف."
+        ]
+      },
+      {
+        heading: "أين تستخدم WhatsApp automation؟",
+        paragraphs: [
+          "يمكن استخدام WhatsApp automation في الحجز، خدمة العملاء، متابعة الطلبات، التذكير بالمواعيد، جمع التقييمات، استقبال الشكاوى، وتأهيل العملاء المحتملين. يمكن ربطها مع HubSpot CRM أو Zoho CRM أو Google Sheets أو Airtable أو Odoo.",
+          "مثال بسيط: يصل طلب من واتساب، يحدد ChatGPT نوع الخدمة، ينشئ n8n أو Make سجلا في CRM، يرسل رسالة تأكيد، ويبلغ الموظف المسؤول. هكذا تتحول المحادثة إلى عملية قابلة للمتابعة."
+        ]
+      },
+      {
+        heading: "الفرق بين chatbot عادي وAI chatbot",
+        paragraphs: [
+          "الـ chatbot العادي يعتمد على قوائم وردود ثابتة. AI chatbot باستخدام OpenAI يستطيع فهم لغة طبيعية وسياق المحادثة. لكنه يحتاج حدودا واضحة حتى لا يعطي وعودا غير صحيحة أو أسعارا غير معتمدة.",
+          "أفضل تصميم هو مزيج: قواعد ثابتة للأمور الحساسة مثل الأسعار والمواعيد، وذكاء اصطناعي للتصنيف والتلخيص والأسئلة المتكررة. هذا يعطي تجربة أفضل ويقلل المخاطر."
+        ]
+      },
+      {
+        heading: "ما الأدوات التي يمكن ربطها؟",
+        paragraphs: [
+          "يمكن بناء الحل باستخدام WhatsApp Business API مع n8n أو Make أو Zapier، ثم ربطه مع OpenAI أو ChatGPT أو Claude أو Gemini حسب الحاجة. كما يمكن ربطه مع HubSpot، Zoho، Pipedrive، Airtable، Notion، Google Sheets، Slack، Microsoft Teams، وPower BI.",
+          "اختيار الأدوات يعتمد على حجم الرسائل، حساسية البيانات، الميزانية، والأنظمة الحالية. المنشآت الصغيرة غالبا تبدأ بحل بسيط ثم تضيف CRM وتقارير لاحقا."
+        ]
+      }
+    ],
+    conclusion: [
+      "WhatsApp Business API مع OpenAI وChatGPT يمكن أن يعطي المنشآت الصغيرة والمتوسطة في الشرق الأوسط تجربة خدمة ومبيعات أكثر سرعة وتنظيما.",
+      "الأهم أن يبنى المساعد حول أسئلة العملاء الحقيقية، مع تحويل واضح للإنسان عند الحالات الحساسة."
+    ]
+  },
+  {
+    slug: "airtable-notion-google-sheets-internal-systems",
+    title: "Airtable وNotion وGoogle Sheets: بناء نظام داخلي خفيف قبل البرمجة",
+    description:
+      "كيف تستخدم المنشآت الصغيرة والمتوسطة Airtable وNotion وGoogle Sheets مع automation tools لبناء نظام داخلي سريع للطلبات والعمليات والتقارير.",
+    date: "2026-05-26",
+    readTime: "6 دقائق قراءة",
+    category: "Internal systems",
+    image: "/assets/audit-cta.png",
+    keywords: [
+      "Airtable automation",
+      "Notion automation",
+      "Google Sheets automation",
+      "internal tools",
+      "no-code automation",
+      "low-code automation",
+      "business operations system",
+      "SME automation"
+    ],
+    intro: [
+      "ليس كل مشروع يحتاج تطبيق مخصص من اليوم الأول. كثير من المنشآت الصغيرة والمتوسطة في الشرق الأوسط تستطيع البدء بنظام داخلي خفيف باستخدام Airtable أو Notion أو Google Sheets، ثم ربطه بأدوات automation مثل n8n وMake وZapier.",
+      "هذا approach مناسب عندما تريد تنظيم الطلبات، العملاء، المهام، المخزون، أو التقارير بسرعة، بدون انتظار أشهر لتطوير نظام كامل."
+    ],
+    sections: [
+      {
+        heading: "متى يكون Airtable مناسبا؟",
+        paragraphs: [
+          "Airtable مناسب عندما تحتاج قاعدة بيانات مرنة مع واجهة سهلة. يمكن استخدامه لإدارة الطلبات، العملاء، الموردين، المشاريع، المحتوى، أو قوائم المخزون. ومع Airtable automation أو n8n يمكن تشغيل إجراءات عند تغير حالة سجل.",
+          "مثلا، عندما يتحول الطلب إلى جاهز، يمكن إرسال رسالة للعميل، إنشاء مهمة توصيل، وتحديث تقرير يومي تلقائيا."
+        ],
+        bullets: [
+          "إدارة بيانات منظمة أكثر من Google Sheets.",
+          "Views مختلفة للفريق والإدارة.",
+          "ربط سهل مع Make وZapier وn8n.",
+          "مناسب كنموذج أولي لنظام داخلي."
+        ]
+      },
+      {
+        heading: "Notion للمعرفة والعمليات",
+        paragraphs: [
+          "Notion ممتاز لتوثيق العمليات، السياسات، قواعد المعرفة، وخطط المشاريع. يمكن ربط Notion مع Slack وGoogle Calendar وZapier وMake وn8n لإنشاء صفحات أو تحديث مهام تلقائيا.",
+          "في خدمة العملاء، يمكن استخدام Notion كقاعدة معرفة داخلية ثم ربطها بمساعد AI يستخدم OpenAI للبحث في السياسات وتجهيز إجابة للموظف."
+        ]
+      },
+      {
+        heading: "Google Sheets لا يزال مفيدا",
+        paragraphs: [
+          "Google Sheets automation مناسب كبداية لأنه مألوف للفريق. يمكن ربط النماذج، الإعلانات، واتساب، والمتجر الإلكتروني بجدول واحد، ثم توليد تقارير وتنبيهات منه.",
+          "لكن إذا أصبحت الجداول كثيرة ومعقدة، فهذا مؤشر للانتقال إلى Airtable أو CRM أو نظام داخلي مخصص. الهدف أن تبدأ بسرعة، لا أن تبقى عالقا في ملفات صعبة الإدارة."
+        ]
+      },
+      {
+        heading: "متى تنتقل إلى نظام مخصص؟",
+        paragraphs: [
+          "عندما تصبح الصلاحيات، السرعة، التكاملات، أو تجربة المستخدم عائقا، يصبح النظام المخصص أفضل. لكن الانتقال يكون أسهل إذا بدأت بترتيب البيانات والعمليات في Airtable أو Notion أو Google Sheets.",
+          "بهذه الطريقة يكون لديك نموذج واضح لما تحتاجه فعلا، وتقل تكلفة بناء النظام لأن المتطلبات لم تعد غامضة."
+        ]
+      }
+    ],
+    conclusion: [
+      "Airtable وNotion وGoogle Sheets أدوات قوية لبناء internal tools سريعة للمنشآت الصغيرة والمتوسطة.",
+      "مع n8n أو Make أو Zapier، يمكن لهذه الأدوات أن تصبح نظام تشغيل مبسطا قبل الاستثمار في تطوير مخصص."
+    ]
+  },
+  {
+    slug: "odoo-shopify-woocommerce-erp-ecommerce-automation",
+    title: "Odoo وShopify وWooCommerce: أتمتة ERP والمتاجر الإلكترونية",
+    description:
+      "كيف تربط المنشآت الصغيرة والمتوسطة Odoo ERP وShopify وWooCommerce مع CRM وWhatsApp والتقارير لتقليل العمل اليدوي.",
+    date: "2026-05-26",
+    readTime: "7 دقائق قراءة",
+    category: "ERP & Ecommerce",
+    image: "/assets/use-cases-map.png",
+    keywords: [
+      "Odoo automation",
+      "Odoo ERP",
+      "Shopify automation",
+      "WooCommerce automation",
+      "ecommerce automation",
+      "ERP integration",
+      "inventory automation",
+      "order management automation",
+      "Middle East ecommerce"
+    ],
+    intro: [
+      "المتاجر والشركات التجارية في الشرق الأوسط غالبا تعمل بين أكثر من نظام: متجر Shopify أو WooCommerce، محاسبة، مخزون، واتساب، شركة شحن، وملفات متابعة. هنا تظهر الحاجة إلى Odoo automation وERP integration وecommerce automation.",
+      "الهدف من الأتمتة ليس فقط نقل الطلبات، بل تقليل الأخطاء في المخزون، تسريع تحديث العميل، ربط المبيعات بالمحاسبة، وإظهار أرقام يومية للإدارة."
+    ],
+    sections: [
+      {
+        heading: "أين تبدأ أتمتة المتجر؟",
+        paragraphs: [
+          "ابدأ من دورة الطلب: العميل يشتري من Shopify أو WooCommerce، يتم إنشاء الطلب، تحديث المخزون، إرسال رسالة تأكيد، إنشاء شحنة، ثم تحديث حالة الطلب. كل خطوة يدوية هنا يمكن أن تسبب تأخيرا أو خطأ.",
+          "باستخدام n8n أو Make أو Zapier يمكن ربط المتجر مع Odoo ERP أو Zoho Inventory أو Google Sheets أو Airtable، ثم إرسال إشعارات واتساب أو بريد للعميل والفريق."
+        ],
+        bullets: [
+          "Order management automation من الطلب حتى التسليم.",
+          "Inventory automation لتقليل أخطاء المخزون.",
+          "ربط الدفع والشحن والمحاسبة.",
+          "تقارير يومية عن المبيعات والطلبات المتأخرة."
+        ]
+      },
+      {
+        heading: "Odoo ERP للشركات التي تريد نظاما أوسع",
+        paragraphs: [
+          "Odoo ERP يجمع المبيعات، المخزون، المحاسبة، الشراء، CRM، والمشاريع في منصة واحدة. لذلك يبحث العملاء عن Odoo implementation أو Odoo integration عندما يريدون تقليل الأدوات المتفرقة.",
+          "لكن نجاح Odoo يعتمد على تصميم العمليات قبل الإعداد. إذا كانت مراحل الطلب والمخزون والموافقة غير واضحة، سيصبح النظام معقدا مهما كانت الأداة قوية."
+        ]
+      },
+      {
+        heading: "Shopify وWooCommerce يحتاجان تكاملات ذكية",
+        paragraphs: [
+          "Shopify automation وWooCommerce automation مهمان عندما يزيد عدد الطلبات أو المنتجات أو القنوات. يمكن ربط المتجر مع Mailchimp، Klaviyo، Google Sheets، HubSpot، Zoho CRM، WhatsApp Business API، وPower BI.",
+          "مثال: عند طلب منتج معين، يرسل النظام رسالة واتساب، يضيف العميل إلى حملة بريدية، يحدث المخزون، وينشئ صفا في تقرير المبيعات. هذه خطوات صغيرة لكنها توفر وقتا كبيرا مع الحجم."
+        ]
+      },
+      {
+        heading: "تقارير التجارة الإلكترونية",
+        paragraphs: [
+          "التقارير مهمة بقدر الأتمتة نفسها. يمكن بناء لوحة في Power BI أو Looker Studio تعرض المبيعات، المنتجات الأكثر طلبا، الطلبات المتأخرة، مصادر العملاء، ومعدلات الإرجاع.",
+          "عندما ترتبط Shopify أو WooCommerce أو Odoo بلوحة بيانات، يستطيع صاحب المنشأة معرفة أين يربح وأين يتأخر، بدون انتظار تقرير يدوي."
+        ]
+      }
+    ],
+    conclusion: [
+      "Odoo وShopify وWooCommerce يمكن أن تصبح أقوى بكثير عندما ترتبط بسير عمل واضح للتجارة الإلكترونية والمخزون وخدمة العملاء.",
+      "للمنشآت الصغيرة والمتوسطة في الشرق الأوسط، الأتمتة الصحيحة تعني طلبات أسرع، أخطاء أقل، وقرارات مبنية على بيانات يومية."
+    ]
+  },
+  {
+    slug: "power-bi-looker-studio-automated-reporting-middle-east",
+    title: "Power BI وLooker Studio للتقارير الآلية ولوحات البيانات",
+    description:
+      "كيف تستخدم المنشآت الصغيرة والمتوسطة Power BI وLooker Studio مع Google Sheets وCRM وOdoo وShopify لبناء تقارير آلية واضحة.",
+    date: "2026-05-26",
+    readTime: "6 دقائق قراءة",
+    category: "BI dashboards",
+    image: "/assets/system-mockup.png",
+    keywords: [
+      "Power BI dashboards",
+      "Looker Studio",
+      "automated reporting",
+      "business intelligence",
+      "BI dashboard",
+      "Google Sheets dashboard",
+      "CRM reporting",
+      "sales dashboard",
+      "operations dashboard"
+    ],
+    intro: [
+      "كثير من المديرين في الشرق الأوسط لا يحتاجون تقريرا أجمل، بل يحتاجون أرقاما تصل في الوقت المناسب. لذلك يبحث العملاء عن Power BI dashboards وLooker Studio وautomated reporting وBI dashboard لفهم المبيعات والعمليات وخدمة العملاء.",
+      "لوحة البيانات الجيدة تربط مصادر مثل Google Sheets وHubSpot وZoho وOdoo وShopify وWooCommerce وWhatsApp logs، ثم تعرض المؤشرات التي تقود القرار."
+    ],
+    sections: [
+      {
+        heading: "Power BI أم Looker Studio؟",
+        paragraphs: [
+          "Power BI قوي للشركات التي تستخدم Microsoft 365 أو تحتاج نمذجة بيانات أكثر تقدما. يناسب التقارير الإدارية، المبيعات، العمليات، المالية، وربط مصادر متعددة.",
+          "Looker Studio مناسب عندما تكون البيانات في Google Sheets أو Google Analytics أو Google Ads وتريد لوحة سهلة المشاركة. كلا الخيارين يمكن أن يخدم المنشآت الصغيرة والمتوسطة إذا صمم حول سؤال واضح."
+        ],
+        bullets: [
+          "Sales dashboard لمتابعة العملاء والصفقات.",
+          "Operations dashboard للطلبات والتأخير.",
+          "Customer service dashboard لوقت الرد والشكاوى.",
+          "Marketing dashboard لمصادر العملاء وتكلفة lead."
+        ]
+      },
+      {
+        heading: "مصادر البيانات التي يجب ربطها",
+        paragraphs: [
+          "يمكن ربط Power BI أو Looker Studio مع Google Sheets، Airtable، HubSpot CRM، Zoho CRM، Odoo ERP، Shopify، WooCommerce، قواعد بيانات، أو ملفات CSV. كما يمكن استخدام n8n أو Make لتجميع البيانات قبل عرضها.",
+          "الأهم أن تكون البيانات نظيفة. إذا كانت أسماء المراحل أو الحالات مختلفة بين كل موظف، ستظهر اللوحة جميلة لكنها غير دقيقة. لذلك يبدأ مشروع BI الجيد بتوحيد التعريفات."
+        ]
+      },
+      {
+        heading: "التقارير الآلية لا تعني كل الأرقام",
+        paragraphs: [
+          "خطأ شائع أن تكون لوحة البيانات مليئة بكل شيء. الأفضل اختيار مؤشرات قليلة: عدد leads، سرعة الرد، نسبة التحويل، الطلبات المتأخرة، المبيعات اليومية، ومصدر العميل.",
+          "كل مؤشر يجب أن يرتبط بقرار. إذا لم يغير الرقم سلوك الفريق أو الإدارة، فهو غالبا ليس ضروريا في النسخة الأولى."
+        ]
+      },
+      {
+        heading: "إضافة الذكاء الاصطناعي إلى التقارير",
+        paragraphs: [
+          "يمكن استخدام OpenAI أو ChatGPT لتوليد ملخص يومي من البيانات: ما الذي زاد؟ ما الذي انخفض؟ ما الحالات التي تحتاج انتباها؟ هذا يساعد الإدارة على قراءة الأرقام بسرعة.",
+          "لكن الذكاء الاصطناعي لا يغني عن مصدر بيانات صحيح. يجب أن تكون الأرقام دقيقة أولا، ثم يأتي التلخيص الذكي كطبقة مساعدة."
+        ]
+      }
+    ],
+    conclusion: [
+      "Power BI وLooker Studio يساعدان المنشآت الصغيرة والمتوسطة على رؤية الأداء اليومي بدون تقارير يدوية مرهقة.",
+      "عندما ترتبط لوحات البيانات مع CRM وERP والمتجر وWhatsApp، يصبح القرار أسرع وأكثر وضوحا."
+    ]
   }
 ];
 

@@ -3,25 +3,31 @@ import { ArrowLeft, CalendarDays, Clock, SearchCheck, Tags } from "lucide-react"
 import { blogArticles } from "./articles";
 
 export const metadata: Metadata = {
-  title: "المدونة | الذكاء الاصطناعي والأتمتة للمنشآت السعودية",
+  title: "المدونة | AI Automation وأدوات الأتمتة للشرق الأوسط",
   description:
-    "مقالات عربية عن أتمتة الأعمال، وكلاء الذكاء الاصطناعي، أتمتة واتساب، لوحات البيانات، وتحسين عمليات المنشآت الصغيرة والمتوسطة في السعودية.",
+    "مقالات عربية عن n8n automation وMake وZapier وHubSpot وZoho وOdoo وOpenAI وChatGPT وWhatsApp Business API للمنشآت الصغيرة والمتوسطة في الشرق الأوسط.",
   keywords: [
-    "الذكاء الاصطناعي في السعودية",
+    "AI automation Middle East",
+    "n8n automation",
+    "Make automation",
+    "Zapier automation",
+    "HubSpot CRM",
+    "Zoho CRM",
+    "Odoo ERP",
+    "WhatsApp Business API",
+    "OpenAI",
+    "ChatGPT",
     "أتمتة الأعمال",
     "الشركات الصغيرة والمتوسطة",
-    "أتمتة واتساب",
-    "أتمتة المبيعات",
-    "لوحات بيانات",
-    "حلول ذكاء اصطناعي للشركات"
+    "حلول ذكاء اصطناعي للشركات في الشرق الأوسط"
   ],
   alternates: {
     canonical: "/blog"
   },
   openGraph: {
-    title: "مدونة أركيباترن | أتمتة وذكاء اصطناعي للمنشآت الصغيرة والمتوسطة",
+    title: "مدونة أركيباترن | AI Automation وأدوات الأتمتة للشرق الأوسط",
     description:
-      "محتوى عربي عملي للمنشآت السعودية التي تريد اختصار العمل المتكرر وتحسين المبيعات وخدمة العملاء.",
+      "محتوى عربي عملي عن n8n وMake وZapier وCRM وWhatsApp Business API وOpenAI للمنشآت الصغيرة والمتوسطة في الشرق الأوسط.",
     url: "/blog",
     siteName: "Archepattern",
     locale: "ar_SA",
@@ -30,11 +36,17 @@ export const metadata: Metadata = {
 };
 
 const featuredKeywords = [
-  "أتمتة الأعمال في السعودية",
-  "حلول الذكاء الاصطناعي للشركات",
-  "أتمتة خدمة العملاء",
-  "أتمتة المبيعات",
-  "ربط الأنظمة",
+  "n8n automation",
+  "Make automation",
+  "Zapier",
+  "HubSpot CRM",
+  "Zoho CRM",
+  "WhatsApp Business API",
+  "OpenAI و ChatGPT",
+  "Odoo ERP",
+  "Airtable",
+  "Power BI",
+  "Shopify و WooCommerce",
   "الشركات الصغيرة والمتوسطة"
 ];
 
@@ -76,10 +88,10 @@ export default function BlogPage() {
             محتوى عربي للظهور في نتائج البحث
           </div>
           <h1 className="mt-6 text-[2.2rem] font-extrabold leading-[1.3] text-white sm:text-5xl md:text-6xl">
-            مقالات عن الذكاء الاصطناعي والأتمتة للمنشآت الصغيرة والمتوسطة في السعودية
+            مقالات عن AI Automation وأدوات الأتمتة للمنشآت الصغيرة والمتوسطة في الشرق الأوسط
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
-            أدلة عملية لأصحاب المنشآت والمديرين في الرياض وجدة والدمام وباقي السعودية: كيف تبدأ بالأتمتة، كيف تستخدم مساعدات واتساب، وكيف تحول العمليات المتكررة إلى أنظمة قابلة للقياس.
+            أدلة عملية لأصحاب المنشآت والمديرين في الخليج والشرق الأوسط: كيف تستخدم n8n وMake وZapier وHubSpot وZoho وOdoo وOpenAI وWhatsApp Business API لتحويل العمل المتكرر إلى أنظمة قابلة للقياس.
           </p>
         </div>
 
